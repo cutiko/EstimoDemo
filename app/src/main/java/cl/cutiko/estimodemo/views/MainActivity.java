@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements Coordinator {
     private SelectBeaconFragment selectBeaconFragment;
     private BeaconFragment beaconFragment;
 
+    private BeaconApplication beaconApplication;
+
     private String selectedKey = null;
 
     private List<cl.cutiko.estimodemo.models.Beacon> beacons = new ArrayList<>();
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements Coordinator {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        beaconApplication = (BeaconApplication) getApplication();
 
         linkWithChilds();
 
@@ -97,5 +101,13 @@ public class MainActivity extends AppCompatActivity implements Coordinator {
     protected void onPause() {
         super.onPause();
         unregisterReceiver(receiver);
+    }
+
+    public void restart(View view) {
+        beaconApplication.startRanging();
+    }
+
+    public void stop(View view) {
+        beaconApplication.stopRanging();
     }
 }

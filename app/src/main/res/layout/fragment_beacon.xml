@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/keyPlaceHolder"
         android:layout_toEndOf="@+id/keyPlaceHolder"
+        android:layout_toRightOf="@+id/keyPlaceHolder"
         android:padding="13dp"
         android:textSize="18sp" />
 
@@ -44,9 +44,33 @@
         android:id="@+id/beaconDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="13dp"
         android:layout_centerInParent="true"
+        android:padding="13dp"
         android:textColor="@color/colorAccent"
         android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/stopRanging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorWarning"
+        android:onClick="stop"
+        android:text="@string/stop_ranging"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/restartRanging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        android:onClick="restart"
+        android:text="@string/restart_ranging"
+        android:textColor="@android:color/black" />
 
 </RelativeLayout>

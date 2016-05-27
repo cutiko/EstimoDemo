@@ -1,16 +1,19 @@
 package cl.cutiko.estimodemo.views;
 
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import cl.cutiko.estimodemo.BeaconApplication;
 import cl.cutiko.estimodemo.R;
 
 public class BeaconFragment extends Fragment {
@@ -18,12 +21,15 @@ public class BeaconFragment extends Fragment {
     private RelativeLayout beaconContainer;
     private TextView beaconName, beaconDistance;
 
-    private Coordinator coordinator;
-
     public BeaconFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +45,6 @@ public class BeaconFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        coordinator = (Coordinator) context;
     }
 
     protected void beaconDataHandler(String key, double distance) {
