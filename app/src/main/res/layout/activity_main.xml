@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".views.MainActivity">
+
+    <TextView
+        android:id="@+id/waitPleaseTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="@string/wait_please" />
+
+    <fragment
+        android:id="@+id/selectBeaconFragment"
+        android:name="cl.cutiko.estimodemo.views.SelectBeaconFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_select_beacon" />
+
+    <fragment
+        android:id="@+id/beaconFragment"
+        android:name="cl.cutiko.estimodemo.views.BeaconFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_beacon" />
+
+</RelativeLayout>
