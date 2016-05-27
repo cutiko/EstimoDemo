@@ -5,21 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
-import com.estimote.sdk.BeaconManager;
-import com.estimote.sdk.Region;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cl.cutiko.estimodemo.BeaconApplication;
 import cl.cutiko.estimodemo.R;
-import cl.cutiko.estimodemo.adapters.BeaconsAdapter;
 
 public class MainActivity extends AppCompatActivity implements Coordinator {
 
@@ -73,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements Coordinator {
     private void handleData(String key, double distance){
         Log.d("BEACON_DATA", "key = " + key + "distance = " + String.valueOf(distance));
         if (selectedKey != null) {
+            if (key.equals(selectedKey)) {
+                beaconFragment.beaconDataHandler(key, distance);
+            }
         } else {
             selectBeaconFragment.refreshAdapter(key);
         }

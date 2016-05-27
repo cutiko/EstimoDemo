@@ -1,7 +1,52 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beaconContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="13dp"
+    android:visibility="gone"
     tools:context="cl.cutiko.estimodemo.views.BeaconFragment">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/keyPlaceHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="13dp"
+        android:text="@string/beacon"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/beaconName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/keyPlaceHolder"
+        android:layout_toEndOf="@+id/keyPlaceHolder"
+        android:padding="13dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/keyPlaceHolder"
+        android:layout_marginTop="21dp"
+        android:padding="13dp"
+        android:text="@string/beacon_distance"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/beaconDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="21sp" />
+
+</RelativeLayout>

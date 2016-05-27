@@ -28,7 +28,7 @@
         android:id="@+id/beaconFragment"
         android:name="cl.cutiko.estimodemo.views.BeaconFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:layout="@layout/fragment_beacon" />
 
 </RelativeLayout>

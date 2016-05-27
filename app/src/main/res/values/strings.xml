@@ -2,5 +2,7 @@
     <string name="app_name">EstimoDemo</string>
 
     <string name="wait_please">Espere porfavor</string>
+    <string name="beacon">Beacon: </string>
+    <string name="beacon_distance">Distancia: </string>
 
 </resources>
