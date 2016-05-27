@@ -8,14 +8,16 @@ public class Beacon {
     private String key;
     private int major, minor;
 
-    public Beacon(int major, int minor) {
-        this.major = major;
-        this.minor = minor;
-        this.key = String.valueOf(major) +":"+ String.valueOf(minor);
+    public Beacon(String key) {
+        this.key = key;
     }
 
     public String getKey() {
         return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public int getMajor() {

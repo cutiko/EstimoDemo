@@ -73,9 +73,8 @@ public class MainActivity extends AppCompatActivity implements Coordinator {
     private void handleData(String key, double distance){
         Log.d("BEACON_DATA", "key = " + key + "distance = " + String.valueOf(distance));
         if (selectedKey != null) {
-
         } else {
-
+            selectBeaconFragment.refreshAdapter(key);
         }
     }
 
